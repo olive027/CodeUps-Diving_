@@ -8,14 +8,14 @@
 }
 
 .side-bar__item:nth-child(n+2) {
-	margin-top: rem(84);
+	margin-top: rem(86);
 	@include mq(md){
-		margin-top: rem(81);
+		margin-top: rem(87);
 	}
 }
 
 .side-bar__content {
-	margin-top: rem(22);
+	margin-top: rem(24);
 	@include mq(md){
 		margin-top: rem(23);
 	}

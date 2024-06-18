@@ -8,6 +8,9 @@
 
 .pagination-wrap.pagination-wrap--single {
 	gap: rem(82);
+	@include mq(md){
+		margin-right: rem(31);
+	}
 }
 
 .pagination-wrap__items {
