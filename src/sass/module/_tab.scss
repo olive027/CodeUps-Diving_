@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.tab {
+	display: grid;
+	grid-template-columns: repeat(2, rem(162));
+	justify-content: center;
+	column-gap: rem(21);
+	row-gap: rem(16);
+	@include mq(md){
+		grid-template-columns: repeat(4, rem(162));
+		justify-content: start;
+		column-gap: rem(32);
+	}
+}
+
+.tab__item a {
+	font-size: rem(14);
+	line-height: calc(22 / 14);
+	font-weight: $normal;
+	text-transform: uppercase;
+	color: $green1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: rem(5) 0;
+	border: 1px solid $green1;
+}
+
+.tab__item.current a {
+	background: $green1;
+	color: $white;
+}
