@@ -2047,7 +2047,7 @@ select {
 }
 
 .price-body__list:nth-child(n+2) {
-	margin-top: 2.5rem;
+	margin-top: 2.3125rem;
 }
 
 .price-list__item {
@@ -2063,7 +2063,8 @@ select {
 
 .price-list__item dt {
 	border-right: 1px solid #408F95;
-	padding: 0.4375rem 0;
+	line-height: 1.43;
+	padding: 0.4375rem 0 0.5rem;
 	text-align: center;
 	width: 69.36%;
 }
@@ -2078,7 +2079,7 @@ select {
 
 .price-list__item dd {
 	border-right: 1px solid #408F95;
-	padding: 0.4375rem 1rem 0.4375rem 0;
+	padding: 0.9375rem 1rem 1.0625rem 0;
 	text-align: right;
 	width: 30.63%;
 }
@@ -2093,7 +2094,7 @@ select {
 	gap: 0.5rem;
 	justify-content: center;
 	line-height: 1.5;
-	padding: 0.5rem 0;
+	padding: 0.5rem 0 0.4375rem;
 }
 
 .price-list__title::before {
@@ -2633,7 +2634,7 @@ html.is-fixed {
 
 .voice-card {
 	box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.25);
-	padding: 0.9375rem 1rem 1.5rem;
+	padding: 0.9375rem 1rem 1.4375rem;
 }
 
 .voice-card__head {
