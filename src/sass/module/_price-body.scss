@@ -8,8 +8,8 @@
 .price-body__content.fish-icon::before {
 	top: rem(-24);
 	@include mq(md){
-		left: calc(50% - min(49vw, 38.2625rem));
-    top: rem(-68);
+		left: calc(50% - min(49vw, 38.6625rem));
+    top: rem(-71.2);
 	}
 }
 
@@ -23,6 +23,6 @@
 .price-body__list:nth-child(n+2) {
 	margin-top: rem(37);
 	@include mq(md){
-		margin-top: rem(80);
+		margin-top: rem(77);
 	}
 }

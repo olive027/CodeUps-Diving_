@@ -19,7 +19,8 @@
 	line-height: 1.43;
 	@include mq(md){
 		width: 67.73%;
-		padding: rem(18) 0;
+		padding: rem(17) 0 rem(18) rem(14);
+		text-align: left;
 	}
 }
 
@@ -38,7 +39,7 @@
 	text-align: right;
 	@include mq(md){
 		width: 32.27%;
-		padding: rem(18) rem(16) rem(18) 0;
+		padding: rem(17) rem(16) rem(18) 0;
 	}
 }
 

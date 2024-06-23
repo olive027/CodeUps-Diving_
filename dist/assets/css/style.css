@@ -3634,8 +3634,8 @@ html {
 }
 
 .price-body__content.fish-icon::before {
-	left: calc(50% - min(49vw, 38.2625rem));
-	top: -4.25rem;
+	left: calc(50% - min(49vw, 38.6625rem));
+	top: -4.45rem;
 }
 
 .price-body__list {
@@ -3644,16 +3644,17 @@ html {
 }
 
 .price-body__list:nth-child(n+2) {
-	margin-top: 5rem;
+	margin-top: 4.8125rem;
 }
 
 .price-list__item dt {
-	padding: 1.125rem 0;
+	padding: 1.0625rem 0 1.125rem 0.875rem;
+	text-align: left;
 	width: 67.73%;
 }
 
 .price-list__item dd {
-	padding: 1.125rem 1rem 1.125rem 0;
+	padding: 1.0625rem 1rem 1.125rem 0;
 	width: 32.27%;
 }
 
