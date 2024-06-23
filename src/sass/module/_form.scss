@@ -54,7 +54,7 @@
 .form__label span {
 	background: $red;
 	color: $white;
-	padding: rem(2) rem(16);
+	padding: rem(3) rem(20) rem(1) rem(17);
 	font-size: rem(12);
 	font-weight: $normal;
 	display: inline-block;
@@ -63,7 +63,7 @@
 }
 
 .form__input {
-	margin-top: rem(16);
+	margin-top: rem(14);
 	@include mq(md){
 		margin-top: 0;
 		width: 68.5714%;
@@ -72,7 +72,7 @@
 
 .form__input-text {
 	border: 1px solid $green1;
-	padding: rem(8) rem(16);
+	padding: rem(8) rem(16) rem(7);
 	width: 100%;
 	font-size: rem(16);
 }

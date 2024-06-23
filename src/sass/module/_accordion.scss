@@ -14,7 +14,7 @@
 	font-weight: 400;
 	background: $green1;
 	color: #fff;
-	padding: rem(16);
+	padding: rem(16) rem(16) rem(13.8);
 	position: relative;
 	transition: opacity .6s;
 	cursor: pointer;
@@ -27,14 +27,16 @@
 .accordion__title::before,
 .accordion__title::after {
 	content: "";
-	width: rem(28);
+	width: rem(28.3);
 	height: rem(1);
 	background: #fff;
 	position: absolute;
-	top: 50%;
+	top: 49%;
 	right: rem(16);
 	transform: translateY(-50%);
 	@include mq(md){
+		top: 50%;
+		width: rem(32.2);
 		right: rem(40);
 	}
 }
@@ -63,9 +65,10 @@
 .accordion__content {
 	border: 1px solid $green1;
 	padding: rem(24) rem(16);
+	line-height: 1.43;
 	display: none;
 	@include mq(md){
 		margin-top: rem(16);
-		padding: rem(40);
+		padding: rem(40) rem(40) rem(39);
 	}
 }
