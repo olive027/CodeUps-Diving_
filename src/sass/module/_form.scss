@@ -54,12 +54,13 @@
 .form__label span {
 	background: $red;
 	color: $white;
-	padding: rem(3) rem(20) rem(1) rem(17);
+	padding: rem(3) rem(12) 0 rem(17);
 	font-size: rem(12);
 	font-weight: $normal;
 	display: inline-block;
 	align-items: center;
 	margin-left: rem(8);
+	letter-spacing: 0.35em;
 }
 
 .form__input {
@@ -77,8 +78,17 @@
 	font-size: rem(16);
 }
 
+.form__input-text--select {
+	padding: rem(10) rem(16) rem(11) rem(7);
+	font-size: rem(12);
+}
+
 .form__input-text::placeholder {
 	color: $green2;
+}
+
+.form__input.textarea {
+	height: rem(200);
 }
 
 .form__input textarea {
@@ -136,14 +146,22 @@
 	}
 }
 
+.form__input label.fan {
+	margin-top: rem(4);
+}
+
+.form__input label.experience {
+	margin-top: rem(2);
+}
+
 select {
 	background: url(../images/common/select-arrow.png) no-repeat;
-	background-size: rem(12) rem(10);
-	background-position: right rem(9) center;
+	background-size: rem(11) rem(10);
+	background-position: right rem(9) top rem(10);
 }
 
 .form__privacy {
-	margin-top: rem(40);
+	margin-top: rem(38);
 	width: 81.73%;
 	margin-inline: auto;
 	@include mq(md){

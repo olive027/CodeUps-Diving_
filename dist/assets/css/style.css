@@ -1299,7 +1299,7 @@ a {
 }
 
 .footer.footer--contact {
-	margin-top: 9rem;
+	margin-top: 9.1875rem;
 }
 
 .footer.footer--404 {
@@ -1333,8 +1333,9 @@ a {
 	display: inline-block;
 	font-size: 0.75rem;
 	font-weight: 400;
+	letter-spacing: 0.35em;
 	margin-left: 0.5rem;
-	padding: 0.1875rem 1.25rem 0.0625rem 1.0625rem;
+	padding: 0.1875rem 0.75rem 0 1.0625rem;
 }
 
 .form__input {
@@ -1348,12 +1349,21 @@ a {
 	width: 100%;
 }
 
+.form__input-text--select {
+	font-size: 0.75rem;
+	padding: 0.625rem 1rem 0.6875rem 0.4375rem;
+}
+
 .form__input-text::-moz-placeholder {
 	color: #DDF0F1;
 }
 
 .form__input-text::placeholder {
 	color: #DDF0F1;
+}
+
+.form__input.textarea {
+	height: 12.5rem;
 }
 
 .form__input textarea {
@@ -1407,16 +1417,24 @@ a {
 	width: 0.625rem;
 }
 
+.form__input label.fan {
+	margin-top: 0.25rem;
+}
+
+.form__input label.experience {
+	margin-top: 0.125rem;
+}
+
 select {
 	background: url(../images/common/select-arrow.png) no-repeat;
-	background-position: right 0.5625rem center;
-	background-size: 0.75rem 0.625rem;
+	background-position: right 0.5625rem top 0.625rem;
+	background-size: 0.6875rem 0.625rem;
 }
 
 .form__privacy {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 2.5rem;
+	margin-top: 2.375rem;
 	width: 81.73%;
 }
 
