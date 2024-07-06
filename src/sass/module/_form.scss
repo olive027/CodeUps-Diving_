@@ -39,7 +39,7 @@
 .form__item:not(:first-child) {
 	margin-top: rem(24);
 	@include mq(md){
-		margin-top: rem(40);
+		margin-top: rem(39);
 	}
 }
 
@@ -81,6 +81,9 @@
 .form__input-text--select {
 	padding: rem(10) rem(16) rem(11) rem(7);
 	font-size: rem(12);
+	@include mq(md){
+		padding: rem(4) rem(16) rem(3) rem(7);
+	}
 }
 
 .form__input-text::placeholder {
@@ -166,7 +169,7 @@ select {
 	margin-inline: auto;
 	@include mq(md){
 		text-align: center;
-		margin-top: rem(80);
+		margin-top: rem(78);
 	}
 }
 
