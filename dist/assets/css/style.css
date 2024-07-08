@@ -163,6 +163,10 @@ a {
 	margin-top: 3.1875rem;
 }
 
+.layout-body--thanks {
+	margin-top: 3.0625rem;
+}
+
 .layout-breadcrumbs {
 	margin-top: 0.5rem;
 }
@@ -1300,6 +1304,10 @@ a {
 
 .footer.footer--contact {
 	margin-top: 9.1875rem;
+}
+
+.footer.footer--thanks {
+	margin-top: 8.9375rem;
 }
 
 .footer.footer--404 {
@@ -2629,18 +2637,19 @@ html.is-fixed {
 }
 
 .thanks-body.fish-icon::before {
-	top: -1.5rem;
+	top: -1.375rem;
 }
 
 .thanks-body__head,
 .thanks-body__text {
 	font-size: 1rem;
 	font-weight: 400;
+	line-height: 1.466;
 	text-align: center;
 }
 
 .thanks-body__text {
-	margin-top: 2.5rem;
+	margin-top: 2.1875rem;
 }
 
 .voice-body-cards {
@@ -2774,6 +2783,10 @@ html {
 
 .layout-body--contact {
 	margin-top: 9.3125rem;
+}
+
+.layout-body--thanks {
+	margin-top: 9.1875rem;
 }
 
 .layout-breadcrumbs--404 {
@@ -3436,6 +3449,10 @@ html {
 	margin-top: 10.1875rem;
 }
 
+.footer.footer--thanks {
+	margin-top: 7.4375rem;
+}
+
 .form__item {
 	align-items: flex-start;
 	display: flex;
@@ -3842,8 +3859,12 @@ html {
 }
 
 .thanks-body.fish-icon::before {
-	left: calc(50% - min(49vw, 38.2625rem));
+	left: calc(50% - min(49vw, 38.7625rem));
 	top: -4.25rem;
+}
+
+.thanks-body__text {
+	margin-top: 2.25rem;
 }
 
 .voice-body-cards {

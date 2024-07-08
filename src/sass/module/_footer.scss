@@ -84,6 +84,13 @@
 	}
 }
 
+.footer.footer--thanks {
+	margin-top: rem(143);
+	@include mq(md){
+		margin-top: rem(119);
+	}
+}
+
 .footer.footer--404 {
 	margin-top: 0;
 }
