@@ -50,11 +50,6 @@
 	}
 }
 
-.common-mv__title--about {
-	@include mq(md){
-		letter-spacing: 0.01em;
-	}
-}
 
 .common-mv__title::first-letter {
 	text-transform: capitalize;
@@ -62,4 +57,14 @@
 
 .common-mv__title span {
 	text-transform: lowercase;
+}
+
+.common-mv__title--about {
+	@include mq(md){
+		letter-spacing: 0.01em;
+	}
+}
+
+.common-mv__title--privacy {
+	text-transform: capitalize;
 }

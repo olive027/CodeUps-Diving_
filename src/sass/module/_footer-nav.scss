@@ -39,6 +39,12 @@
 	}
 }
 
+.footer-nav__left-items:nth-child(n+3) {
+	@include mq(md){
+		margin-left: 16px;
+	}
+}
+
 .footer-nav__left-item a,
 .footer-nav__right-item a {
 	display: block;

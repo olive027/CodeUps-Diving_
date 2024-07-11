@@ -1,7 +1,8 @@
 @use 'global' as *;
 
 .sitemap-body-nav.fish-icon::before {
-	top: rem(4.8);
+	top: rem(2.6);
+	left: calc(50% - min(49vw, rem(172)));
 	@include mq(md){
 		content: none;
 	}
@@ -11,15 +12,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	gap: rem(18);
+	gap: rem(28);
 	white-space: nowrap;
+	@include mq(md){
+		gap: rem(128);
+	}
 }
 
 .sitemap-body-nav__left,
 .sitemap-body-nav__right {
 	width: calc(50% - rem(5));
 	@include mq(md){
-		width: calc(50% - rem(36));
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -30,6 +34,18 @@
 .sitemap-body-nav__left-items,
 .sitemap-body-nav__right-items {
 	margin-top: rem(16);
+}
+
+.sitemap-body-nav__left-items:nth-child(n+3) {
+	@include mq(md){
+		margin-left: 128px;
+	}
+}
+
+.sitemap-body-nav__right-items:nth-child(n+3) {
+	@include mq(md){
+		margin-left: 144px;
+	}
 }
 
 .sitemap-body-nav__left-item a,

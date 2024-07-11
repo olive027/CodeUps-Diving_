@@ -21,9 +21,12 @@
 	}
 }
 
-.privacy-body__item,
 .privacy-body__text {
-	margin-top: rem(40);
+	margin-top: rem(38);
+}
+
+.privacy-body__item {
+	margin-top: rem(33);
 }
 
 .privacy-body__text,
@@ -35,5 +38,5 @@
 
 .privacy-body__item-number {
 	list-style: decimal;
-	padding-left: 1em;
+	padding-left: 23px;
 }

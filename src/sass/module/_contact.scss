@@ -28,6 +28,16 @@
 	}
 }
 
+.contact--sitemap::after {
+	width: rem(110);
+	top: rem(-26);
+	@include mq(md){
+		height: rem(147);
+    top: rem(-38);
+		right: calc(50% - min(46.6vw, rem(672)));
+    width: rem(306);
+	}
+}
 
 .contact__content {
 	filter: drop-shadow(0 rem(4) rem(4) rgba(0,0,0,0.25));
@@ -138,3 +148,9 @@
 	margin-top: rem(40);
 }
 
+.contact--sitemap {
+	margin-top: rem(94);
+	@include mq(md){
+		margin-top: rem(126);
+	}
+}
