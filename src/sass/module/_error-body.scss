@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .error-body {
-	padding: rem(80) 0 rem(40);
+	padding: rem(58) 0 rem(40);
 	text-align: center;
 	position: relative;
 	@include mq(md){
-		padding: rem(148) 0;
+		padding: rem(134) 0;
 	}
 }
 
@@ -16,14 +16,14 @@
 	background: url(../images/common/404-bg.png) no-repeat;
 	background-size: contain;
 	position: absolute;
-	top: 3%;
+	top: -8%;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: -1;
 	@include mq(md){
 		width: rem(698);
 		height: rem(698);
-		top: 4%;
+		top: -5%;
 		left: 37%;
 	}
 }
@@ -35,6 +35,7 @@
 	letter-spacing: 0.5em;
 	color: $white;
 	padding-left: 0.5em;
+	line-height: 1;
 	@include mq(md){
 		font-size: rem(160);
 	}
@@ -46,6 +47,10 @@
 	font-weight: $normal;
 	line-height: calc(24 / 16);
 	color: $white;
+	margin-top: rem(3);
+	@include mq(md){
+		margin-top: rem(40);
+	}
 }
 
 .error-body__btn {

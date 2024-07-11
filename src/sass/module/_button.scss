@@ -23,6 +23,14 @@
 	color: $green1;
 }
 
+.button.button--green span {
+	letter-spacing: 0.05em;
+}
+
+.button.button--green span.big {
+	text-transform: uppercase;
+}
+
 .button::first-letter {
 	text-transform: capitalize;
 }
@@ -61,6 +69,7 @@
 .button.button--green span::after {
 	background: url(../images/common/button-arrow-green.png) no-repeat;
 	background-size: contain;
+	top: 48%;
 }
 
 .button::before {

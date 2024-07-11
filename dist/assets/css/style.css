@@ -665,6 +665,14 @@ a {
 	color: #408F95;
 }
 
+.button.button--green span {
+	letter-spacing: 0.05em;
+}
+
+.button.button--green span.big {
+	text-transform: uppercase;
+}
+
 .button::first-letter {
 	text-transform: capitalize;
 }
@@ -703,6 +711,7 @@ a {
 .button.button--green span::after {
 	background: url(../images/common/button-arrow-green.png) no-repeat;
 	background-size: contain;
+	top: 48%;
 }
 
 .button::before {
@@ -1057,7 +1066,8 @@ a {
 	text-transform: lowercase;
 }
 
-.common-mv__title--privacy {
+.common-mv__title--privacy,
+.common-mv__title--terms {
 	text-transform: capitalize;
 }
 
@@ -1163,7 +1173,7 @@ a {
 }
 
 .error-body {
-	padding: 5rem 0 2.5rem;
+	padding: 3.625rem 0 2.5rem;
 	position: relative;
 	text-align: center;
 }
@@ -1175,7 +1185,7 @@ a {
 	height: 21.5625rem;
 	left: 50%;
 	position: absolute;
-	top: 3%;
+	top: -8%;
 	transform: translateX(-50%);
 	width: 21.5625rem;
 	z-index: -1;
@@ -1187,6 +1197,7 @@ a {
 	font-size: 5rem;
 	font-weight: 400;
 	letter-spacing: 0.5em;
+	line-height: 1;
 	padding-left: 0.5em;
 }
 
@@ -1196,6 +1207,7 @@ a {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
+	margin-top: 0.1875rem;
 }
 
 .error-body__btn {
@@ -1328,7 +1340,7 @@ a {
 }
 
 .footer.footer--404 {
-	margin-top: 0;
+	margin-top: 0.3125rem;
 }
 
 .form {
@@ -2234,6 +2246,10 @@ select {
 	margin-top: 2.375rem;
 }
 
+.privacy-body__text--last {
+	margin-top: 2.125rem;
+}
+
 .privacy-body__item {
 	margin-top: 2.0625rem;
 }
@@ -2242,12 +2258,12 @@ select {
 .privacy-body__item-text {
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 2;
+	line-height: 1.994;
 }
 
 .privacy-body__item-number {
 	list-style: decimal;
-	padding-left: 23px;
+	padding-left: 1.5rem;
 }
 
 .section-title {
@@ -2638,22 +2654,29 @@ html.is-fixed {
 	font-weight: 500;
 }
 
-.terms-body__item,
+.terms-body__item {
+	margin-top: 2.125rem;
+}
+
 .terms-body__text {
-	margin-top: 2.5rem;
+	margin-top: 2.375rem;
+}
+
+.terms-body__text--last {
+	margin-top: 2rem;
 }
 
 .terms-body__text,
 .terms-body__item-text {
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 2;
+	line-height: 1.996;
 }
 
 .terms-body__item-number {
 	list-style: decimal;
 	list-style-position: inside;
-	padding-left: 1em;
+	padding-left: 1.4375rem;
 	text-indent: -1em;
 }
 
@@ -3332,6 +3355,18 @@ html {
 	width: 19.125rem;
 }
 
+.contact--privacy::after {
+	height: 8.9375rem;
+	top: -2.5rem;
+	width: 18.875rem;
+}
+
+.contact--terms::after {
+	height: 9.0625rem;
+	top: -2.4375rem;
+	width: 19.0625rem;
+}
+
 .contact__content {
 	align-items: center;
 	box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
@@ -3389,18 +3424,22 @@ html {
 }
 
 .error-body {
-	padding: 9.25rem 0;
+	padding: 8.375rem 0;
 }
 
 .error-body::after {
 	height: 43.625rem;
 	left: 37%;
-	top: 4%;
+	top: -5%;
 	width: 43.625rem;
 }
 
 .error-body__title {
 	font-size: 10rem;
+}
+
+.error-body__text {
+	margin-top: 2.5rem;
 }
 
 .error-body__btn {
@@ -3491,6 +3530,10 @@ html {
 
 .footer.footer--thanks {
 	margin-top: 7.4375rem;
+}
+
+.footer.footer--404 {
+	margin-top: 1.1875rem;
 }
 
 .form__item {
@@ -3829,11 +3872,19 @@ html {
 
 .privacy-body.fish-icon::before {
 	left: calc(50% - min(49vw, 38.7625rem));
-	top: -4.25rem;
+	top: -4.375rem;
 }
 
 .privacy-body__title {
 	font-size: 2rem;
+}
+
+.privacy-body__item {
+	margin-top: 2rem;
+}
+
+.privacy-body__item-number {
+	padding-left: 1.4375rem;
 }
 
 .section-title__main {
@@ -3903,11 +3954,20 @@ html {
 
 .terms-body.fish-icon::before {
 	left: calc(50% - min(49vw, 38.7625rem));
-	top: -4.0625rem;
+	top: -4.375rem;
 }
 
 .terms-body__title {
 	font-size: 2rem;
+}
+
+.terms-body__item {
+	margin-top: 2rem;
+}
+
+.terms-body__text,
+.terms-body__item-text {
+	line-height: 1.998;
 }
 
 .thanks-body.fish-icon::before {
