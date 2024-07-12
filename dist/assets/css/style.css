@@ -3662,17 +3662,21 @@ html {
 .information-body__tab:nth-child(2) a::before {
 	-webkit-mask-image: url(../images/common/shark-icon.svg);
 	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
 	background: currentColor;
 	mask-image: url(../images/common/shark-icon.svg);
 	mask-repeat: no-repeat;
+	mask-size: contain;
 }
 
 .information-body__tab:nth-child(3) a::before {
 	-webkit-mask-image: url(../images/common/seafood-icon.svg);
 	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
 	background: currentColor;
 	mask-image: url(../images/common/seafood-icon.svg);
 	mask-repeat: no-repeat;
+	mask-size: contain;
 }
 
 .information-body__tab.current:first-child a::before {
