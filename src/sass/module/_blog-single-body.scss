@@ -34,7 +34,7 @@
 	font-weight: $medium;
 	margin-top: rem(8);
 	border-bottom: 1px solid $green1;
-	background: $white;
+	// background: $white;
 	@include mq(md){
 		margin-top: rem(4);
 		font-size: rem(32);
@@ -57,14 +57,14 @@
 	object-fit: cover;
 }
 
-.blog-single-body__text {
+.blog-single-body__text p {
 	margin-top: rem(24);
 	@include mq(md){
 		margin-top: rem(40);
 	}
 }
 
-.blog-single-body__list {
+.blog-single-body__list  {
 	margin-top: rem(24);
 	@include mq(md){
 		margin-top: rem(40);

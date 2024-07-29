@@ -28,11 +28,22 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	transition: background .4s, color .4s;
 }
 
 .pagination-wrap__item.current {
 	color: #fff;
 	background: $green1;
+}
+
+.pagination-wrap__item:hover {
+	color: $white;
+	background: $green1;
+}
+
+.pagination-wrap__item.current:hover {
+	color: $green1;
+	background: $white;
 }
 
 .pagination-wrap__prev,

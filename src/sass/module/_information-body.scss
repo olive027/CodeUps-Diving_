@@ -33,10 +33,16 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	transition: background .4s, color .4s;
 	@include mq(md){
 		font-size: rem(24);
 		padding: rem(13) 0 rem(12);
 	}
+}
+
+.information-body__tab a:hover {
+	background: $green1;
+	color: $white;
 }
 
 .information-body__tab.current a {
@@ -56,8 +62,13 @@
 
 .information-body__tab:first-child a::before {
 	@include mq(md){
-		background: url(../images/common/whale-green.png) no-repeat;
-		background-size: contain;
+		background: currentColor;
+		mask-image: url(../images/common/whale-icon.svg);
+		mask-repeat: no-repeat;
+		-webkit-mask-image: url(../images/common/whale-icon.svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-size: contain;
+		-webkit-mask-size: contain;
 	}
 }
 
@@ -82,13 +93,6 @@
 		-webkit-mask-repeat: no-repeat;
 		mask-size: contain;
 		-webkit-mask-size: contain;
-	}
-}
-
-.information-body__tab.current:first-child a::before {
-	@include mq(md){
-		background: url(../images/common/whale-white.png) no-repeat;
-		background-size: contain;
 	}
 }
 

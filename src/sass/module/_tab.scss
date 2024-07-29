@@ -1,16 +1,17 @@
 @use "global" as *;
 
 .tab {
-	display: grid;
-	grid-template-columns: repeat(2, rem(162));
-	justify-content: center;
-	column-gap: rem(21);
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(21);
 	row-gap: rem(16);
 	@include mq(md){
-		grid-template-columns: repeat(4, rem(162));
-		justify-content: start;
 		column-gap: rem(32);
 	}
+}
+
+.tab__item {
+	width: rem(162);
 }
 
 .tab__item a {
@@ -19,14 +20,26 @@
 	font-weight: $normal;
 	text-transform: uppercase;
 	color: $green1;
+	background: $white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: rem(5) 0;
 	border: 1px solid $green1;
+	transition: background .4s, color .4s;
 }
 
 .tab__item.current a {
 	background: $green1;
 	color: $white;
+}
+
+.tab__item a:hover {
+	background: $green1;
+	color: $white;
+}
+
+.tab__item.current a:hover {
+	background: $white;
+	color: $green1;
 }

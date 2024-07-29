@@ -506,7 +506,6 @@ a {
 }
 
 .blog-single-body__title {
-	background: #fff;
 	border-bottom: 1px solid #408F95;
 	font-size: 1.5rem;
 	font-weight: 500;
@@ -525,7 +524,7 @@ a {
 	width: 100%;
 }
 
-.blog-single-body__text {
+.blog-single-body__text p {
 	margin-top: 1.5rem;
 }
 
@@ -1670,6 +1669,12 @@ select {
 	justify-content: center;
 	padding: 0.625rem 0 9px;
 	text-align: center;
+	transition: background 0.4s, color 0.4s;
+}
+
+.information-body__tab a:hover {
+	background: #408F95;
+	color: #fff;
 }
 
 .information-body__tab.current a {
@@ -1860,10 +1865,11 @@ select {
 }
 
 .modal__img img {
-	-o-object-fit: cover;
+	-o-object-fit: contain;
 	aspect-ratio: 920/586;
-	height: 100%;
-	object-fit: cover;
+	height: 90vh;
+	height: 90dvh;
+	object-fit: contain;
 	width: 100%;
 }
 
@@ -1976,12 +1982,23 @@ select {
 	display: flex;
 	height: 2.375rem;
 	justify-content: center;
+	transition: background 0.4s, color 0.4s;
 	width: 2.375rem;
 }
 
 .pagination-wrap__item.current {
 	background: #408F95;
 	color: #fff;
+}
+
+.pagination-wrap__item:hover {
+	background: #408F95;
+	color: #fff;
+}
+
+.pagination-wrap__item.current:hover {
+	background: #fff;
+	color: #408F95;
 }
 
 .pagination-wrap__prev,
@@ -2611,18 +2628,19 @@ html.is-fixed {
 }
 
 .tab {
-	grid-column-gap: 1.3125rem;
-	-moz-column-gap: 1.3125rem;
-	grid-row-gap: 1rem;
-	column-gap: 1.3125rem;
-	display: grid;
-	grid-template-columns: repeat(2, 10.125rem);
-	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.3125rem;
 	row-gap: 1rem;
+}
+
+.tab__item {
+	width: 10.125rem;
 }
 
 .tab__item a {
 	align-items: center;
+	background: #fff;
 	border: 1px solid #408F95;
 	color: #408F95;
 	display: flex;
@@ -2632,11 +2650,22 @@ html.is-fixed {
 	line-height: 1.5714285714;
 	padding: 0.3125rem 0;
 	text-transform: uppercase;
+	transition: background 0.4s, color 0.4s;
 }
 
 .tab__item.current a {
 	background: #408F95;
 	color: #fff;
+}
+
+.tab__item a:hover {
+	background: #408F95;
+	color: #fff;
+}
+
+.tab__item.current a:hover {
+	background: #fff;
+	color: #408F95;
 }
 
 .terms-body.fish-icon::before {
@@ -2905,33 +2934,33 @@ html {
 }
 
 .about-gallery__img:nth-child(6n+1) {
-	grid-column: 1;
-	grid-row: 1/span 2;
+	grid-column: 1/2;
+	grid-row: 1/3;
 }
 
 .about-gallery__img:nth-child(6n+2) {
-	grid-column: 2/span 2;
-	grid-row: 1;
+	grid-column: 2/4;
+	grid-row: 1/2;
 }
 
 .about-gallery__img:nth-child(6n+3) {
-	grid-column: 2/span 2;
-	grid-row: 2;
+	grid-column: 2/4;
+	grid-row: 2/3;
 }
 
 .about-gallery__img:nth-child(6n+4) {
-	grid-column: 1/span 2;
-	grid-row: 3;
+	grid-column: 1/3;
+	grid-row: 3/4;
 }
 
 .about-gallery__img:nth-child(6n+5) {
-	grid-column: 1/span 2;
-	grid-row: 4;
+	grid-column: 1/3;
+	grid-row: 4/5;
 }
 
 .about-gallery__img:nth-child(6n+6) {
-	grid-column: 3;
-	grid-row: 3/span 2;
+	grid-column: 3/4;
+	grid-row: 3/5;
 }
 
 .about::after {
@@ -3107,7 +3136,7 @@ html {
 	margin-top: 2.4375rem;
 }
 
-.blog-single-body__text {
+.blog-single-body__text p {
 	margin-top: 2.5rem;
 }
 
@@ -3655,8 +3684,13 @@ html {
 }
 
 .information-body__tab:first-child a::before {
-	background: url(../images/common/whale-green.png) no-repeat;
-	background-size: contain;
+	-webkit-mask-image: url(../images/common/whale-icon.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background: currentColor;
+	mask-image: url(../images/common/whale-icon.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
 }
 
 .information-body__tab:nth-child(2) a::before {
@@ -3677,11 +3711,6 @@ html {
 	mask-image: url(../images/common/seafood-icon.svg);
 	mask-repeat: no-repeat;
 	mask-size: contain;
-}
-
-.information-body__tab.current:first-child a::before {
-	background: url(../images/common/whale-white.png) no-repeat;
-	background-size: contain;
 }
 
 .information-body__content-wrap {
@@ -3952,8 +3981,6 @@ html {
 .tab {
 	-moz-column-gap: 2rem;
 	column-gap: 2rem;
-	grid-template-columns: repeat(4, 10.125rem);
-	justify-content: start;
 }
 
 .terms-body.fish-icon::before {
