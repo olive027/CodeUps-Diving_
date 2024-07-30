@@ -19,12 +19,13 @@
 
 .information-body__tab {
 	width: rem(102);
+	cursor: pointer;
 	@include mq(md){
 		width: rem(300);
 	}
 
 }
-.information-body__tab a {
+.information-body__tab span {
 	background: $green2;
 	color: $green1;
 	padding: rem(10) 0 9px;
@@ -40,18 +41,18 @@
 	}
 }
 
-.information-body__tab a:hover {
+.information-body__tab span:hover {
 	background: $green1;
 	color: $white;
 }
 
-.information-body__tab.current a {
+.information-body__tab.current span {
 	background: $green1;
 	color: $white;
 	box-shadow: rem(2) rem(2) rem(4) rgb(0 0 0 / .25);
 }
 
-.information-body__tab a::before {
+.information-body__tab span::before {
 	@include mq(md){
 		content: "";
 		width: rem(64);
@@ -60,7 +61,7 @@
 	}
 }
 
-.information-body__tab:first-child a::before {
+.information-body__tab:first-child span::before {
 	@include mq(md){
 		background: currentColor;
 		mask-image: url(../images/common/whale-icon.svg);
@@ -72,7 +73,7 @@
 	}
 }
 
-.information-body__tab:nth-child(2) a::before {
+.information-body__tab:nth-child(2) span::before {
 	@include mq(md){
 		background: currentColor;
 		mask-image: url(../images/common/shark-icon.svg);
@@ -84,7 +85,7 @@
 	}
 }
 
-.information-body__tab:nth-child(3) a::before {
+.information-body__tab:nth-child(3) span::before {
 	@include mq(md){
 		background: currentColor;
 		mask-image: url(../images/common/seafood-icon.svg);

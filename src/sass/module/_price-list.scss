@@ -14,12 +14,12 @@
 .price-list__item dt {
 	width: 69.36%;
 	border-right: 1px solid $green1;
-	padding: rem(7) 0 rem(8);
+	padding: rem(7) rem(3) rem(8);
 	text-align: center;
 	line-height: 1.43;
 	@include mq(md){
 		width: 67.73%;
-		padding: rem(17) 0 rem(18) rem(14);
+		padding: rem(17) rem(14) rem(18) rem(14);
 		text-align: left;
 	}
 }

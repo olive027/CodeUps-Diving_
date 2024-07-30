@@ -183,18 +183,18 @@ $(".js-archive-header").click(function(){
 
 // =========== FAQアコーディオン==--===================
 //一番最初のQを開いた状態にしておく（必要なければ削除）
-$(".js-accordion__item:first-child .js-accordion__content").css(
-	"display",
-	"block"
-);
+// $(".js-accordion__item:first-child .js-accordion__content").css(
+// 	"display",
+// 	"block"
+// );
 //一番最初のQを開いた状態にしておく（必要なければ削除）
-$(".js-accordion__item:first-child .js-accordion__title").addClass('is-open');
+// $(".js-accordion__item:first-child .js-accordion__title").addClass('is-open');
 
 $(".js-accordion__title").click(function(){
 	$(this).toggleClass('is-open'); //+-を切り替えるため
 	$(this).next().slideToggle(300); //クリックしたとこのコンテンツの表示・非表示
-	$(".js-accordion__title").not(this).removeClass('is-open'); //クリックしたとこ以外で開いてたとこを閉じる
-	$(".js-accordion__title").not(this).next().slideUp(300); //クリックしたとこ以外で開いてたとこを閉じる
+	// $(".js-accordion__title").not(this).removeClass('is-open'); //クリックしたとこ以外で開いてたとこを閉じる
+	// $(".js-accordion__title").not(this).next().slideUp(300); //クリックしたとこ以外で開いてたとこを閉じる
 });
 
 //=================== about モーダル======================
@@ -225,6 +225,20 @@ $(".js-information-tab").click(function(){
 	// クリックしたタブのインデックス番号と同じコンテンツを表示
 	$(".js-information-content").hide().eq(Index).fadeIn(600);
 });
+
+// =============== パラメーターからinformation タブをactiveにする ======================
+$(function(){
+  var url = location.href;
+  url = (url.match(/\?no=tab\d+$/) || [])[0];
+  var params = url.split('?');
+  var tab = params[1].split('=');
+
+  if($(tab).length){
+    var tabname = tab[1];
+  } else {
+    var tabname = "tab1";
+  }
+})
 
 // =============== フォームバリデーション======================
   $('.form__btn').click(function(){
