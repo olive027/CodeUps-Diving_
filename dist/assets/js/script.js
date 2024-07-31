@@ -174,6 +174,24 @@ jQuery(function ($) {
     });
   });
 
+  // ========= リンクの別ページへの遷移でヘッダー被りをなくす ==================
+  $(function () {
+    var pageHash = window.location.hash;
+    if (pageHash) {
+      var scrollToElement = $('[data-id="' + pageHash + '"]');
+      if (!scrollToElement.length) return;
+      $(window).on('load', function () {
+        history.replaceState('', '', './');
+        var locationOffset = scrollToElement.offset().top;
+        var navigationBarHeight = $('.header').innerHeight();
+        locationOffset = locationOffset - navigationBarHeight - 65;
+        $('html, body').animate({
+          scrollTop: locationOffset
+        }, 300, 'swing');
+      });
+    }
+  });
+
   // ========= サイドバーアコーディオン ==================
   $(".js-archive-item:first-child .js-archive-body").css("display", "block");
   $(".js-archive-item:first-child .js-archive-header").addClass("is-open");
@@ -226,17 +244,19 @@ jQuery(function ($) {
     $(".js-information-content").hide().eq(Index).fadeIn(600);
   });
 
-  // =============== パラメーターからinformation タブをactiveにする ======================
+  // =============== パラメーターで別ページからinformation タブをactiveにする ======================
   $(function () {
-    var url = location.href;
-    url = (url.match(/\?no=tab\d+$/) || [])[0];
-    var params = url.split('?');
-    var tab = params[1].split('=');
-    if ($(tab).length) {
-      var tabname = tab[1];
-    } else {
-      var tabname = "tab1";
-    }
+    var urlParams = new URLSearchParams(window.location.search);
+    var tabname = urlParams.get('no') || 'license';
+
+    // Hide all content
+    $('.js-information-content').hide();
+    // Remove current class from all tabs
+    $('.js-information-tab').removeClass('current');
+
+    // Show the selected content and add current class to the corresponding tab
+    $('#' + tabname + '-content').show();
+    $('#' + tabname).addClass('current');
   });
 
   // =============== フォームバリデーション======================

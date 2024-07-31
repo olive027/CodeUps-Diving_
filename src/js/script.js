@@ -118,15 +118,15 @@ box.each(function(){
     color.css('width','0%');
     //inviewを使って背景色が画面に現れたら処理をする
     color.on('inview', function(){
-        if(counter == 0){
-					$(this).delay(200).animate({'width':'100%'},speed,function(){
-                   image.css('opacity','1');
-                   $(this).css({'left':'0' , 'right':'auto'});
-                   $(this).animate({'width':'0%'},speed);
-                })
-            counter = 1;
-          }
-     });
+      if(counter == 0){
+        $(this).delay(200).animate({'width':'100%'},speed,function(){
+          image.css('opacity','1');
+          $(this).css({'left':'0' , 'right':'auto'});
+          $(this).animate({'width':'0%'},speed);
+        })
+          counter = 1;
+      }
+    });
 });
 
 // ============== ページトップボタン=====================
@@ -148,7 +148,7 @@ $(function () {
     var footHeight = $("footer").innerHeight();
 
     if (scrollHeight - scrollPosition <= footHeight) {
- // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+  // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
       pageTop.css({
         position: "absolute",
         bottom: footHeight + 14,
@@ -170,6 +170,24 @@ $(function () {
     );
     return false;
   });
+});
+
+// ========= リンクの別ページへの遷移でヘッダー被りをなくす ==================
+$(function() {
+  let pageHash = window.location.hash;
+  if (pageHash) {
+      let scrollToElement = $('[data-id="' + pageHash + '"]');
+      if (!scrollToElement.length) return;
+      $(window).on('load', function() {
+          history.replaceState('', '', './');
+          let locationOffset = scrollToElement.offset().top;
+          let navigationBarHeight = $('.header').innerHeight();
+          locationOffset = locationOffset - navigationBarHeight - 65;
+          $('html, body').animate({
+              scrollTop: locationOffset
+          }, 300, 'swing');
+      });
+  }
 });
 
 // ========= サイドバーアコーディオン ==================
@@ -226,19 +244,20 @@ $(".js-information-tab").click(function(){
 	$(".js-information-content").hide().eq(Index).fadeIn(600);
 });
 
-// =============== パラメーターからinformation タブをactiveにする ======================
+// =============== パラメーターで別ページからinformation タブをactiveにする ======================
 $(function(){
-  var url = location.href;
-  url = (url.match(/\?no=tab\d+$/) || [])[0];
-  var params = url.split('?');
-  var tab = params[1].split('=');
+  var urlParams = new URLSearchParams(window.location.search);
+  var tabname = urlParams.get('no') || 'license';
 
-  if($(tab).length){
-    var tabname = tab[1];
-  } else {
-    var tabname = "tab1";
-  }
-})
+  // Hide all content
+  $('.js-information-content').hide();
+  // Remove current class from all tabs
+  $('.js-information-tab').removeClass('current');
+
+  // Show the selected content and add current class to the corresponding tab
+  $('#' + tabname + '-content').show();
+  $('#' + tabname).addClass('current');
+});
 
 // =============== フォームバリデーション======================
   $('.form__btn').click(function(){
