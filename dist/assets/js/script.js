@@ -246,15 +246,14 @@ jQuery(function ($) {
 
   // =============== パラメーターで別ページからinformation タブをactiveにする ======================
   $(function () {
+    // URLのパラメータ部分（？以降）を取得
     var urlParams = new URLSearchParams(window.location.search);
+    // クエリパラメーターのnoの値を取得（パラメーターがない場合はデフォルトのlicense)
     var tabname = urlParams.get('no') || 'license';
-
-    // Hide all content
     $('.js-information-content').hide();
-    // Remove current class from all tabs
-    $('.js-information-tab').removeClass('current');
+    $('.js-information-tab').removeClass('current'); //全てのタブを非アクティブに
 
-    // Show the selected content and add current class to the corresponding tab
+    // 選択されたタブのコンテンツを表示
     $('#' + tabname + '-content').show();
     $('#' + tabname).addClass('current');
   });
