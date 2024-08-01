@@ -174,22 +174,8 @@ jQuery(function ($) {
     });
   });
 
-  // ========= ページ内リンク・別ページ遷移でヘッダー被りをなくす ==================
+  // ========= ページ内リンク・別ページ遷移でヘッダー被りをなくす （footer priceのリンク）==================
   $(function () {
-    function scrollToHash(urlHash) {
-      var headH = $('.header').outerHeight();
-      if (urlHash) {
-        var target = $(urlHash);
-        if (!target.length) return; // ターゲットがなかった場合は関数を終了
-        var position = target.offset().top - headH - 50;
-        $('body, html').animate({
-          scrollTop: position
-        }, 300, 'swing', function () {
-          history.replaceState(null, null, ' '); // URLのハッシュ部分を削除
-        });
-      }
-    }
-
     // ページがロードされたとき
     $(window).on('load', function () {
       var urlHash = window.location.hash;
@@ -202,6 +188,16 @@ jQuery(function ($) {
       var urlHash = $(this).attr('href');
       scrollToHash(urlHash);
     });
+    function scrollToHash(urlHash) {
+      var headH = $('.header').outerHeight();
+      if (urlHash) {
+        var target = $(urlHash);
+        if (!target.length) return; // ターゲットがなかった場合は関数を終了
+        var position = target.offset().top - headH - 50;
+        $('html, body').scrollTop(position); // アニメーションなしでスクロール
+        history.replaceState(null, null, ' '); // URLのハッシュ部分を削除
+      }
+    }
   });
 
   // ========= サイドバーアコーディオン ==================
