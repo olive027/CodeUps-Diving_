@@ -3,14 +3,13 @@
 .privacy-body.fish-icon::before {
 	top: rem(-24);
 	@include mq(md){
-		left: calc(50% - min(49vw, 38.7625rem));
+		left: calc(50% - min(49vw, 37.1625rem));
     top: rem(-70);
 	}
 }
 
-.privacy-body__wrap {
+.privacy-body__inner.inner {
 	max-width: rem(800);
-	margin-inline: auto;
 }
 
 .privacy-body__title {

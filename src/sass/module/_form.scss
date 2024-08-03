@@ -1,10 +1,5 @@
 @use "global" as *;
 
-.form {
-	max-width: rem(700);
-	margin-inline: auto;
-}
-
 .form__item {
 	border-bottom: 1px dashed $green1;
 	padding-bottom: rem(24);

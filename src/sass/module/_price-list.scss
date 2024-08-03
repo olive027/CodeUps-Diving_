@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.price-list {
+	@include mq(md){
+		display: flex;
+		align-items: center;
+	}
+}
+
 .price-list__item {
 	font-size: rem(16);
 	line-height: calc(24 / 16);

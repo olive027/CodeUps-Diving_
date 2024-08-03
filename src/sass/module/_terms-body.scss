@@ -1,16 +1,15 @@
 @use "global" as *;
 
+.terms-body__inner.inner {
+	max-width: rem(800);
+}
+
 .terms-body.fish-icon::before {
 	top: rem(-24);
 	@include mq(md){
 		left: calc(50% - min(49vw, 38.7625rem));
     top: rem(-70);
 	}
-}
-
-.terms-body__wrap {
-	max-width: rem(800);
-	margin-inline: auto;
 }
 
 .terms-body__title {

@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.faq-body__inner.inner {
+	max-width: rem(700);
+}
+
 .faq-body__accordion.fish-icon::before {
 	top: rem(-24);
 	@include mq(md){

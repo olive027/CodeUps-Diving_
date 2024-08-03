@@ -1,8 +1,7 @@
 @use "global" as *;
 
-.price-body__content {
+.price-body__inner.inner {
 	max-width: rem(700);
-	margin-inline: auto;
 }
 
 .price-body__content.fish-icon::before {
@@ -10,19 +9,5 @@
 	@include mq(md){
 		left: calc(50% - min(49vw, 38.6625rem));
     top: rem(-71.2);
-	}
-}
-
-.price-body__list {
-	@include mq(md){
-		display: flex;
-		align-items: center;
-	}
-}
-
-.price-body__list:nth-child(n+2) {
-	margin-top: rem(37);
-	@include mq(md){
-		margin-top: rem(77);
 	}
 }

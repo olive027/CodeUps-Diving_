@@ -1,31 +1,27 @@
 @use "global" as *;
 
-.accordion__item {
-	max-width: rem(700);
-	margin-inline: auto;
+.accordion__items {
+	display: grid;
+	gap: rem(40);
 }
 
-.accordion__item:nth-child(n+2) {
-	margin-top: rem(40);
-}
-
-.accordion__title {
+.accordion-item__title {
 	font-size: rem(16);
 	font-weight: 400;
 	background: $green1;
 	color: #fff;
-	padding: rem(16) rem(16) rem(13.8);
+	padding: rem(16) rem(55) rem(13.8) rem(16);
 	position: relative;
 	transition: opacity .6s;
 	cursor: pointer;
 	@include mq(md){
-		padding: rem(25) rem(40);
+		padding: rem(25) rem(80) rem(25) rem(40);
 		font-size: rem(20);
 	}
 }
 
-.accordion__title::before,
-.accordion__title::after {
+.accordion-item__title::before,
+.accordion-item__title::after {
 	content: "";
 	width: rem(28.3);
 	height: rem(1);
@@ -41,28 +37,28 @@
 	}
 }
 
-.accordion__title::before {
+.accordion-item__title::before {
 	transition: opacity .4s;
-}
-
-.accordion__title::after {
-	transform: rotate(90deg);
-	transition: transform .4s;
-}
-
-.accordion__title:hover {
-	opacity: .8;
-}
-
-.accordion__title.is-open::before {
 	opacity: 0;
 }
 
-.accordion__title.is-open::after {
-	transform: rotate(180deg);
+.accordion-item__title::after {
+	transition: transform .4s;
 }
 
-.accordion__content {
+.accordion-item__title:hover {
+	opacity: .8;
+}
+
+.accordion-item__title.is-open::before {
+	opacity: 1;
+}
+
+.accordion-item__title.is-open::after {
+	transform: rotate(90deg);
+}
+
+.accordion-item__content {
 	border: 1px solid $green1;
 	padding: rem(24) rem(16);
 	line-height: 1.43;
