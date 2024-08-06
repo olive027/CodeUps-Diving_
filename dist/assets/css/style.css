@@ -418,9 +418,9 @@ a {
 
 .blog-body__image img,
 .blog-body__singleContent figure img {
-	-o-object-fit: cover;
+	-o-object-fit: contain;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	width: 100%;
 }
 
@@ -433,7 +433,7 @@ a {
 }
 
 .blog-body__singleContent ul li {
-	align-items: center;
+	align-items: flex-start;
 	display: flex;
 	gap: 0.5625rem;
 	line-height: 1.5;
@@ -443,7 +443,9 @@ a {
 	background: url(../images/common/hitode-green.png) no-repeat;
 	background-size: contain;
 	content: "";
+	flex-shrink: 0;
 	height: 1.125rem;
+	margin-top: 0.1875rem;
 	width: 1.125rem;
 }
 
@@ -3991,9 +3993,6 @@ html {
 
 .voice-cards {
 	grid-template-columns: repeat(2, 1fr);
-}
-
-.voice-cards--page {
 	row-gap: 5rem;
 }
 
