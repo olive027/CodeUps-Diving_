@@ -9,19 +9,7 @@ jQuery(function ($) {
   });
 
   //============================loading==================================
-<<<<<<< HEAD
-  // var loadingTitle = document.querySelectorAll('.loading__title--white');　//要素のテキストを取得
-  // loadingTitle.forEach((target) => {
-  // 	// タグ内のテキストを一文字ずつ分割
-  // 	target.innerHTML = target.textContent.replace(/\S/g,'<span>$&</span>')
-  // });
-
-  // ローディングが始まる前にbodyにoverflow: hiddenを追加してスクロールを無効化
-  // document.body.style.overflow = 'hidden';
-
-=======
   // js-loadingがある時の身ローディング処理を行う
->>>>>>> e99755d6ae71137453061675d6a728715f7a2fcf
   if (document.querySelector('.js-loading')) {
     var tl = gsap.timeline();
     tl.fromTo('.js-img-left', {
