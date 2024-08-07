@@ -9,55 +9,47 @@ $('.js-hamburger').click(function(){
 });
 
 //============================loading==================================
-// var loadingTitle = document.querySelectorAll('.loading__title--white');　//要素のテキストを取得
-// loadingTitle.forEach((target) => {
-// 	// タグ内のテキストを一文字ずつ分割
-// 	target.innerHTML = target.textContent.replace(/\S/g,'<span>$&</span>')
-// });
+// js-loadingがある時の身ローディング処理を行う
+if (document.querySelector('.js-loading')) {
+  var tl = gsap.timeline();
+  tl.fromTo('.js-img-left', {
+    y: "120%",
+  },{
+    delay: 0.3,
+    y: 0,
+    duration: 1.2,
+  })
+  .fromTo('.js-img-right', {
+    y: "120%",
+  },{
+    y: 0,
+    duration: 1.2,
+  },"<10.4166%")
+  .fromTo('.js-mv-title',{
+    autoAlpha: 0,
+    y: 50,
+  },{
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.7,
+  },"+=0.2")
+  .to('.js-loading',{
+    display: "none",
+    duration: 1,
+  },"+=0.3")
+  .to('.js-container', {
+    display: "block",
+    opacity: 1,
+    visibility: "visible",
+    duration: 1.3,
+    ease: "power2.out",
+  },"<");
 
-// ローディングが始まる前にbodyにoverflow: hiddenを追加してスクロールを無効化
-// document.body.style.overflow = 'hidden';
-
-var tl = gsap.timeline();
-tl.fromTo('.js-img-left', {
-	y: "120%",
-},{
-	delay: 0.3,
-	y: 0,
-	duration: 1.2,
-})
-.fromTo('.js-img-right', {
-	y: "120%",
-},{
-	y: 0,
-	duration: 1.2,
-},"<10.4166%")
-.fromTo('.js-mv-title',{
-	autoAlpha: 0,
-	y: 50,
-},{
-	autoAlpha: 1,
-	y: 0,
-	duration: 0.7,
-},"+=0.2")
-.to('.js-loading',{
-	display: "none",
-  duration: 1,
-},"+=0.3")
-.to('.js-container', {
-	display: "block",
-  opacity: 1,
-  visibility: "visible",
-	// autoAlpha: 1,
-  duration:1.3,
-  ease: "power2.out",
-},"<");
-
-tl.eventCallback('onComplete', function () {
-  // document.body.style.overflow = '';
-  initSwiper();
-  nextSwiper();
-});
+  tl.eventCallback('onComplete', function () {
+    initSwiper();
+    nextSwiper();
+  });
+}
 
 //====================mv swiper=========----===========
 // swiper
